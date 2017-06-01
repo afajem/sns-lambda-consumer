@@ -1,0 +1,23 @@
+{
+  "name": "snsConsumer-lambda-js",
+  "version": "1.0.0",
+  "description": "AWS Lambda function to process inbound SNS and write out the payload to a specified S3 bucket",
+  "main": "lambda.js",
+  "scripts": {
+    "setup": "mkdir -p dist",
+    "bundle": "zip -r dist/bundle.zip node_modules && zip -j dist/bundle.zip src/lambda.js",
+    "deploy": "aws lambda update-function-code --function-name snsConsumer --zip-file fileb://./dist/bundle.zip",
+    "build": "npm install && npm run setup && npm run bundle && npm run deploy"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "json",
+    "S3",
+    "sns"
+  ],
+  "author": "Niran Fajemisin (https://github.com/afajem)",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
