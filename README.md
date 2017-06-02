@@ -40,7 +40,7 @@ The source code is based on a NodeJS package structure and uses NPM to import li
 - Ensure that you've followed the [Requirements](#requirements) section above
 - Run `npm run build` to install dependencies, package the Lambda function and node modules in a zip and finally deploys the Lambda function to AWS using the AWS CLI.
 
-###License
+## License
 
 See [LICENSE](LICENSE) for further details.
 
